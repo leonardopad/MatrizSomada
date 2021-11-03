@@ -26,12 +26,12 @@ int main (){
 	std:: cout << "\n";
 	std:: cout << "\n";
 	somarDiagonal(vetor);
-	
-	
-	
+	std:: cout << "\n";
+	std:: cout << "\n";
+	std:: cout << "Soma Diagona secundaria";
+	std:: cout << "\n";
+	somarDiagonalSec(vetor);
 	return 0;
-	
-	
 }
 
 int somarLinhas(int vetor[LINHA][COLUNA]){
@@ -66,26 +66,44 @@ int somarColuna(int vetor[LINHA][COLUNA]){
 }
 
 int somarDiagonal(int vetor[LINHA][COLUNA]){
-	int diagonaisSomadas[] = {0,0};
+	int soma = 0;
+	int diagonal[] = {0} ;
 	
 	for(int linha = 0; linha < LINHA; linha++){
 		for(int coluna = 0; coluna < COLUNA; coluna++){
 		vetor[linha][coluna] = rand()%10;
-		std:: cout << " | " << vetor[linha][coluna] << " | ";
 		if(linha == coluna){
-			for(int diagonal = 0; diagonal < 5; diagonal++){
-				diagonaisSomadas[diagonal] += vetor[linha][coluna];
-				}
+		std:: cout << "|" << vetor[linha][coluna] << "|";
+		}else {
+	    	std:: cout << "|" << " " << "|";
+		} 
+		if(linha == coluna){
+			soma += vetor[linha][coluna];
 			}
 		}
 		std:: cout << "\n";
 	}
-	
-	for(int i = 0; i < 2; i++){
-		std:: cout << "\n" << diagonaisSomadas[i];
-	}
-//	diagonaisSomadas[coluna] += vetor[linha][coluna];
+	std:: cout << "-------------" << soma;
+//	for (int i = 0; i < 1; i++){
+//		std:: cout << diagonal[i];
+//	}
 }
-
-
-
+int somarDiagonalSec(int vetor[LINHA][COLUNA]){
+	int soma2 = 0;
+	for(int linha = 0; linha < LINHA; linha++){
+		for(int coluna = 0; coluna < COLUNA; coluna++){
+		vetor[linha][coluna] = rand()%10;
+		if(  (5 - 1)- linha == coluna){
+		std:: cout << "|" << vetor[linha][coluna] << "|";
+	    } else {
+	    	std:: cout << "|" << " " << "|";
+		} 
+		if(  (5 - 1)- linha == coluna) {
+			soma2 += vetor[linha][coluna];
+			}
+		}
+		std:: cout << "\n";
+	}
+	std:: cout << soma2;
+	
+}
