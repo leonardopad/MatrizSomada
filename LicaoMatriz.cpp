@@ -1,5 +1,5 @@
 #include "header.h"
-// importa√ß√£o de terceiros que n√£o sejam bibliotecas C e C++ recebem aspas e n√£o <>;
+// importaÁ„o de terceiros que n„o sejam bibliotecas C e C++ recebem aspas e n„o <>;
 int main (){
 	
 	srand(time(NULL));
@@ -24,6 +24,7 @@ int main (){
 	somarColuna(vetor);
 	std:: cout << "\n";
 	std:: cout << "\n";
+	std:: cout << "Soma Diagonal Primaria";
 	std:: cout << "\n";
 	somarDiagonal(vetor);
 	std:: cout << "\n";
